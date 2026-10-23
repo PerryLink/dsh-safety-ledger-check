@@ -1,0 +1,22 @@
+{
+  "ruleId": "SL-002",
+  "purpose": "负责人初次培训 20 学时，低于 32 学时",
+  "pairs": [
+    {
+      "name": "boundary-inclusive",
+      "material": "SL-002-compliant.yaml",
+      "expect": {
+        "ruleId": "SL-002",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "SL-002-unsafe.yaml",
+      "expect": {
+        "ruleId": "SL-002",
+        "count": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "path": "docs/assets/dsh-safety-ledger-check-hero.png",
+    "kind": "hero",
+    "alt": "dsh-safety-ledger-check terminal output",
+    "caption": "Real dsh-safety-ledger-check checker output."
+  },
+  {
+    "path": "docs/assets/dsh-safety-ledger-check-demo.gif",
+    "kind": "demo",
+    "alt": "Animated dsh-safety-ledger-check terminal session",
+    "caption": "The same run, assembled line by line."
+  }
+]

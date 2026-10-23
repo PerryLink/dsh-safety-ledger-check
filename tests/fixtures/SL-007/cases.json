@@ -1,0 +1,22 @@
+{
+  "ruleId": "SL-007",
+  "purpose": "证书有效期只有 1 年，短于 3 年",
+  "pairs": [
+    {
+      "name": "boundary-inclusive",
+      "material": "SL-007-compliant.yaml",
+      "expect": {
+        "ruleId": "SL-007",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "SL-007-unsafe.yaml",
+      "expect": {
+        "ruleId": "SL-007",
+        "count": 1
+      }
+    }
+  ]
+}

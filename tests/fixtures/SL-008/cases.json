@@ -1,0 +1,22 @@
+{
+  "ruleId": "SL-008",
+  "purpose": "作业日期晚于证书有效期",
+  "pairs": [
+    {
+      "name": "boundary-inclusive",
+      "material": "SL-008-compliant.yaml",
+      "expect": {
+        "ruleId": "SL-008",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "SL-008-unsafe.yaml",
+      "expect": {
+        "ruleId": "SL-008",
+        "count": 1
+      }
+    }
+  ]
+}

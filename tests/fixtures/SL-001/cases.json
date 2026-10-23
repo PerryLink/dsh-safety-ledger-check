@@ -1,0 +1,22 @@
+{
+  "ruleId": "SL-001",
+  "purpose": "岗前培训 16 学时，低于 24 学时",
+  "pairs": [
+    {
+      "name": "boundary-inclusive",
+      "material": "SL-001-compliant.yaml",
+      "expect": {
+        "ruleId": "SL-001",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "SL-001-unsafe.yaml",
+      "expect": {
+        "ruleId": "SL-001",
+        "count": 1
+      }
+    }
+  ]
+}

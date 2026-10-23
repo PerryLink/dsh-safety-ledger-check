@@ -1,0 +1,22 @@
+{
+  "ruleId": "SL-004",
+  "purpose": "缺培训内容",
+  "pairs": [
+    {
+      "name": "boundary-inclusive",
+      "material": "SL-004-compliant.yaml",
+      "expect": {
+        "ruleId": "SL-004",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "SL-004-unsafe.yaml",
+      "expect": {
+        "ruleId": "SL-004",
+        "count": 1
+      }
+    }
+  ]
+}

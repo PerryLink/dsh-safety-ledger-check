@@ -1,0 +1,22 @@
+{
+  "ruleId": "SL-011",
+  "purpose": "姓名仍是模板占位符",
+  "pairs": [
+    {
+      "name": "boundary-inclusive",
+      "material": "SL-011-compliant.yaml",
+      "expect": {
+        "ruleId": "SL-011",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "SL-011-unsafe.yaml",
+      "expect": {
+        "ruleId": "SL-011",
+        "count": 1
+      }
+    }
+  ]
+}

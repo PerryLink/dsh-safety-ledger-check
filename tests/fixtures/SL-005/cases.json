@@ -1,0 +1,22 @@
+{
+  "ruleId": "SL-005",
+  "purpose": "缺教育级别",
+  "pairs": [
+    {
+      "name": "boundary-inclusive",
+      "material": "SL-005-compliant.yaml",
+      "expect": {
+        "ruleId": "SL-005",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "SL-005-unsafe.yaml",
+      "expect": {
+        "ruleId": "SL-005",
+        "count": 1
+      }
+    }
+  ]
+}

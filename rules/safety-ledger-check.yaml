@@ -1,0 +1,221 @@
+# 施工安全资格台账 · 规则库
+#
+# 引文于 2026-10-24 从中国政府网逐字取回：
+#   令第3号  https://www.gov.cn/zhengce/2006-01/17/content_5712856.htm
+#   令第60号 https://www.gov.cn/zhengce/202601/content_7053933.htm
+#
+# 时效说明（本包最重要的一个判断）：
+#   令第60号 于 2025-12-17 公布、**2026-06-01 施行**，其第四十五条明确
+#   「《住房和城乡建设部关于印发〈建筑施工特种作业人员管理规定〉的通知》
+#    （建质〔2008〕75号）同时废止」。所以凡引用 75 号的规则都已过期，
+#   本包一律引 60 号。核对 2026-06-01 之前的台账时，应换用旧规则库。
+#
+# ⚠️ 本包的能力边界：
+#   只核对台账自身的填写与字段自洽。不判断台账之外是否真的做过培训，
+#   不判断证书真伪（那要上全国工程质量安全监管信息平台查），
+#   也不判断某工种是否属于特种作业范围（工种目录另行规定，见 60 号令第二条）。
+
+plugin: dsh-safety-ledger-check
+version: "2026.1"
+as_of: "2026-10-24"
+
+# ⚠️ 明确未纳入的一条（宁可不做，不做错）：
+#   60号令第二十条「按证书载明的工种作业」——证书工种 ≠ 实际工种即视同无证上岗，罚 10 万以下。
+#   现有引擎没有「两个文本字段相等」的检查类型；能用的 sharedTerms 只比字面相关，
+#   「塔式起重机司机」与「塔式起重机信号工」会被判为同一工种 —— 对一条 10 万罚款的规则，
+#   这种假阴性比不检查更危险。故本版不纳入，等引擎有了受控词表比对再做。
+notImplemented:
+  - id: SL-009
+    title: 应按证书载明的工种作业
+    reason: 引擎无法做两文本字段的精确相等比较；近似比对会产生高危假阴性
+    basis: 住建部令第60号 第二十条
+
+ledger:
+  # 本版覆盖第一本台账；其余台账在报告里逐本列出「未覆盖」
+  covered: ["安全教育与资格台账"]
+  notCovered:
+    - "安全检查台账"
+    - "隐患整改台账"
+    - "应急演练台账"
+    - "机械设备台账"
+    - "危大工程台账"
+    - "消防台账"
+    - "劳保用品台账"
+    - "事故台账"
+    - "分包单位安全管理台账"
+
+rules:
+  # ── 安全教育 ────────────────────────────────────────────────────────
+  - id: SL-001
+    title: 新上岗人员岗前培训不得少于 24 学时
+    severity: error
+    params:
+      check:
+        kind: number
+        field: trainingHours
+        min: 24
+        fix: 核对岗前培训学时；本条只比较数值，不判断培训内容是否覆盖大纲
+    basis:
+      document: 《生产经营单位安全培训规定》
+      number: 国家安全生产监督管理总局令第3号
+      clause: 第十三条
+      excerpt: 生产经营单位新上岗的从业人员，岗前安全培训时间不得少于24学时。
+      kind: direct
+      source: https://www.gov.cn/zhengce/2006-01/17/content_5712856.htm
+
+  - id: SL-002
+    title: 负责人与安管人员应满足 32/12 学时
+    severity: error
+    params:
+      check:
+        kind: number
+        field: managerHours
+        min: 32
+        fix: 核对负责人/安管人员的初次培训学时；年度再培训不得少于 12 学时，需另行核对
+    basis:
+      document: 《生产经营单位安全培训规定》
+      number: 国家安全生产监督管理总局令第3号
+      clause: 第九条
+      excerpt: 生产经营单位主要负责人和安全生产管理人员初次安全培训时间不得少于32学时。每年再培训时间不得少于12学时。
+      kind: direct
+      source: https://www.gov.cn/zhengce/2006-01/17/content_5712856.htm
+
+  - id: SL-003
+    title: 培训档案应记录时间、内容、参加人员与考核结果
+    severity: error
+    params:
+      check:
+        kind: presence
+        field: assessResult
+        fix: 补填考核结果；时间、内容、参加人员、考核结果四项缺任一都属「未如实记录」
+    basis:
+      document: 《生产经营单位安全培训规定》
+      number: 国家安全生产监督管理总局令第3号
+      clause: 第二十二条
+      excerpt: 生产经营单位应当建立健全从业人员安全生产教育和培训档案，由生产经营单位的安全生产管理机构以及安全生产管理人员详细、准确记录培训的时间、内容、参加人员以及考核结果等情况。
+      kind: direct
+      source: https://www.gov.cn/zhengce/2006-01/17/content_5712856.htm
+
+  - id: SL-004
+    title: 培训档案应记录培训内容
+    severity: error
+    params:
+      check:
+        kind: presence
+        field: trainingContent
+        fix: 补填培训内容；空白档案不能证明培训发生过
+    basis:
+      document: 《生产经营单位安全培训规定》
+      number: 国家安全生产监督管理总局令第3号
+      clause: 第二十二条
+      excerpt: 生产经营单位应当建立健全从业人员安全生产教育和培训档案，由生产经营单位的安全生产管理机构以及安全生产管理人员详细、准确记录培训的时间、内容、参加人员以及考核结果等情况。
+      kind: direct
+      source: https://www.gov.cn/zhengce/2006-01/17/content_5712856.htm
+
+  - id: SL-005
+    title: 三级安全培训教育的适用性提示
+    severity: warn
+    params:
+      check:
+        kind: presence
+        field: educationLevel
+        fix: 补填教育级别（公司/项目/班组）；注意本条依据原文针对「加工、制造业等生产单位」，建筑工地的三级教育属行业通行做法，适用性需人工判断
+    basis:
+      document: 《生产经营单位安全培训规定》
+      number: 国家安全生产监督管理总局令第3号
+      clause: 第十二条
+      excerpt: 加工、制造业等生产单位的其他从业人员，在上岗前必须经过厂（矿）、车间（工段、区、队）、班组三级安全培训教育。
+      kind: derived-from-principle
+      source: https://www.gov.cn/zhengce/2006-01/17/content_5712856.htm
+    note: >-
+      ⚠️ 适用性存疑，故本条只到 warn。条文写的是「加工、制造业等生产单位」，
+      并未点名建筑施工企业；建筑工地的三级教育要求来自行业管理规定与地方细则，
+      本包不伪造一条针对建筑业的引文。是否构成违规请按当地口径判断。
+
+  # ── 特种作业资格 ────────────────────────────────────────────────────
+  - id: SL-006
+    title: 特种作业人员应持有资格证书编号
+    severity: error
+    params:
+      check:
+        kind: presence
+        field: certNo
+        fix: 补填证书编号；使用未取得资格证书的人员从事特种作业，处 10 万元以下罚款
+    basis:
+      document: 《建筑施工特种作业人员管理规定》
+      number: 住房和城乡建设部令第60号
+      clause: 第三条
+      excerpt: 建筑施工特种作业人员应当依法参加专门的安全作业培训并考核合格，取得建筑施工特种作业操作资格证书（以下简称资格证书），方可上岗从事相应的施工作业。
+      kind: direct
+      source: https://www.gov.cn/zhengce/202601/content_7053933.htm
+
+  - id: SL-007
+    title: 证书有效期不得短于 3 年
+    severity: warn
+    params:
+      check:
+        kind: dateGap
+        earlierField: certIssueDate
+        laterField: certExpiryDate
+        minDays: 1095
+        fix: 核对发证日期与有效期；本条规定有效期为 3 年，本条只查「不短于」，超长不报
+    basis:
+      document: 《建筑施工特种作业人员管理规定》
+      number: 住房和城乡建设部令第60号
+      clause: 第十四条
+      excerpt: 资格证书在全国范围内有效，有效期为3年。
+      kind: direct
+      source: https://www.gov.cn/zhengce/202601/content_7053933.htm
+
+  - id: SL-008
+    title: 作业日期不得晚于证书有效期
+    severity: error
+    params:
+      check:
+        kind: dateGap
+        earlierField: workDate
+        laterField: certExpiryDate
+        minDays: 1
+        fix: 核对作业日期是否落在证书有效期内；过期证书视同无证上岗
+    basis:
+      document: 《建筑施工特种作业人员管理规定》
+      number: 住房和城乡建设部令第60号
+      clause: 第十四条
+      excerpt: 资格证书在全国范围内有效，有效期为3年。
+      kind: direct
+      source: https://www.gov.cn/zhengce/202601/content_7053933.htm
+
+  - id: SL-010
+    title: 首次取证人员 6 个月内不得独立作业
+    severity: error
+    params:
+      check:
+        kind: dateGap
+        earlierField: certIssueDate
+        laterField: soloWorkDate
+        minDays: 182
+        fix: 核对独立作业日期；首次取证人员应先经不少于 6 个月实习，实习期内不得独立作业
+    basis:
+      document: 《建筑施工特种作业人员管理规定》
+      number: 住房和城乡建设部令第60号
+      clause: 第二十二条
+      excerpt: 首次取得资格证书的建筑施工特种作业人员在正式上岗前，用人单位应当安排不少于6个月的实习操作。实习期内，实习人员应当穿戴醒目实习标志，并由从事相应工种6年以上的建筑施工特种作业人员进行作业指导，不得独立作业。
+      kind: direct
+      source: https://www.gov.cn/zhengce/202601/content_7053933.htm
+
+  - id: SL-011
+    title: 台账不应残留模板占位符
+    severity: info
+    params:
+      check:
+        kind: containsAny
+        field: personName
+        terms: [XXX, 待填, 示例, ×××, 张三]
+        fix: 把占位内容换成实际姓名
+    basis:
+      document: 本机构资料归档办法
+      number: 本机构配置
+      clause: 本机构配置
+      excerpt: 台账应填写实际人员信息，不得留存模板示例文字；该要求由本机构归档办法规定，不属于法规条款。
+      kind: institutional-configuration
+      source: https://www.gov.cn/
