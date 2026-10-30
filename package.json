@@ -1,6 +1,6 @@
 {
   "name": "dsh-safety-ledger-check",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "核对施工安全资格台账：三级教育与学时、培训档案四要素、特种作业证书、有效期、工种匹配、六个月实习期。",
   "type": "module",
   "main": "lib/index.mjs",
