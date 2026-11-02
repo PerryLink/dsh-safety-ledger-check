@@ -1,0 +1,3 @@
+req_id,metric,threshold,actual,script,evidence_sha256,pass,source,counted
+CHK-SAFETY-LEDGER-CHECK-A01,vitest 真实运行,33/33,33,npx vitest run,16f927977348c72e4a3d316531cd26ab85e12674ed3b375dd1c0645fc4811506,true,public/synthetic,false
+CHK-SAFETY-LEDGER-CHECK-A02,失败用例数,0,0,npx vitest run,16f927977348c72e4a3d316531cd26ab85e12674ed3b375dd1c0645fc4811506,true,public/synthetic,false
