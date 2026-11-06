@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="660" viewBox="0 0 1100 660" role="img" aria-label="dsh-safety-ledger-check 结构图：台账的列 → 十条规则的判据 → 引用的条款号，按证据等级分成三带；issues[] 与 skipped[] 两条出口，虚线边界列出 SL-009 未实现与只覆盖一本台账">
+<title>dsh-safety-ledger-check · clause alignment</title>
+<desc>Ledger columns, ten implemented criteria and the article each rule cites, grouped by evidence kind with the matching severity ceiling; issues[] and skipped[] leave to the reviewer, and a dashed boundary states the unimplemented rule and the ledger coverage limit.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.28" y2="1"><stop offset="0" stop-color="#131a2a"/><stop offset="1" stop-color="#0c1016"/></linearGradient>
+<filter id="soft" x="-20%" y="-20%" width="140%" height="170%"><feDropShadow dx="0" dy="6" stdDeviation="9" flood-color="#0c1016" flood-opacity="0.30"/></filter>
+</defs>
+<rect width="1100" height="660" fill="url(#bg)"/>
+<text x="44" y="54" fill="#eef2fb" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="26" font-weight="700">dsh-safety-ledger-check</text>
+<rect x="404" y="34" width="138" height="24" rx="12" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<text x="416" y="51" fill="#8c97ae" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11">safety_ledger_check</text>
+<rect x="807" y="33" width="249" height="26" rx="13" fill="#232b4a" stroke="#3c4870" stroke-width="1"/>
+<text x="819" y="51" fill="#8496f5" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12">规则包 2026.1 · 10 条已实现 · 1 条未实现</text>
+<text x="44" y="82" fill="#b9c3d8" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">一份安全教育与资格台账，逐行对到条款上：差异回行号与字段，未执行的检查写明原因。</text>
+<path d="M44 100 L1056 100" stroke="#2c3650" stroke-width="1" stroke-linecap="round"/>
+<text x="60" y="126" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" font-weight="700">台账列 · 一人一行</text>
+<text x="360" y="126" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" font-weight="700">规则 · 判据</text>
+<text x="730" y="126" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" font-weight="700">依据条款</text>
+<text x="1044" y="126" fill="#8c97ae" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11" text-anchor="end">级别</text>
+<text x="60" y="145" fill="#8c97ae" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">JSON / YAML · rows[] · 一行一人</text>
+<rect x="360" y="138.5" width="7" height="7" rx="2" fill="#8496f5"/>
+<text x="372" y="145" fill="#8c97ae" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">数值</text>
+<rect x="408" y="138.5" width="7" height="7" rx="2" fill="#58c3b4"/>
+<text x="420" y="145" fill="#8c97ae" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">存在</text>
+<rect x="456" y="138.5" width="7" height="7" rx="2" fill="#e0a34a"/>
+<text x="468" y="145" fill="#8c97ae" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">日期差</text>
+<rect x="515" y="138.5" width="7" height="7" rx="2" fill="#b99cf0"/>
+<text x="527" y="145" fill="#8c97ae" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">占位符</text>
+<text x="730" y="145" fill="#8c97ae" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">条款号 · 引文逐字核对</text>
+<text x="60" y="166" fill="#ff8f86" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" font-weight="700">直接依据 direct · 严重级上限 error</text>
+<rect x="40" y="152" width="5" height="258" rx="2.5" fill="#ff8f86" opacity="0.85"/>
+<rect x="60" y="174" width="272" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<text x="72" y="190.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">学时 trainingHours</text>
+<rect x="360" y="174" width="356" height="24" rx="7" fill="#1b2335" stroke="#3a4664" stroke-width="1"/>
+<rect x="360" y="174" width="4" height="24" rx="2" fill="#8496f5"/>
+<text x="376" y="190.5" fill="#eef2fb" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14" font-weight="700">SL-001</text>
+<text x="704" y="190.5" fill="#b9c3d8" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" text-anchor="end">≥ 24 学时</text>
+<rect x="730" y="174" width="250" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<rect x="730" y="174" width="3" height="24" rx="1.5" fill="#8496f5"/>
+<text x="744" y="190.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">令第3号 · 第十三条</text>
+<circle cx="992" cy="186" r="4" fill="#ff8f86"/>
+<text x="1004" y="190.5" fill="#ff8f86" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" font-weight="700">error</text>
+<path d="M333 186 L352 186" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3"/>
+<path d="M352 183 L359 186 L352 189" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M716 186 L723 186" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M723 183 L730 186 L723 189" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60" y="204" width="272" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<text x="72" y="220.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">管理岗学时 managerHours</text>
+<rect x="360" y="204" width="356" height="24" rx="7" fill="#1b2335" stroke="#3a4664" stroke-width="1"/>
+<rect x="360" y="204" width="4" height="24" rx="2" fill="#8496f5"/>
+<text x="376" y="220.5" fill="#eef2fb" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14" font-weight="700">SL-002</text>
+<text x="704" y="220.5" fill="#b9c3d8" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" text-anchor="end">≥ 32 学时</text>
+<rect x="730" y="204" width="250" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<rect x="730" y="204" width="3" height="24" rx="1.5" fill="#8496f5"/>
+<text x="744" y="220.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">令第3号 · 第九条</text>
+<circle cx="992" cy="216" r="4" fill="#ff8f86"/>
+<text x="1004" y="220.5" fill="#ff8f86" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" font-weight="700">error</text>
+<path d="M333 216 L352 216" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3"/>
+<path d="M352 213 L359 216 L352 219" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M716 216 L723 216" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M723 213 L730 216 L723 219" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60" y="234" width="272" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<text x="72" y="250.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">考核结果 assessResult</text>
+<rect x="360" y="234" width="356" height="24" rx="7" fill="#1b2335" stroke="#3a4664" stroke-width="1"/>
+<rect x="360" y="234" width="4" height="24" rx="2" fill="#58c3b4"/>
+<text x="376" y="250.5" fill="#eef2fb" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14" font-weight="700">SL-003</text>
+<text x="704" y="250.5" fill="#b9c3d8" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" text-anchor="end">非空</text>
+<rect x="730" y="234" width="250" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<rect x="730" y="234" width="3" height="24" rx="1.5" fill="#8496f5"/>
+<text x="744" y="250.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">令第3号 · 第二十二条</text>
+<circle cx="992" cy="246" r="4" fill="#ff8f86"/>
+<text x="1004" y="250.5" fill="#ff8f86" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" font-weight="700">error</text>
+<path d="M333 246 L352 246" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3"/>
+<path d="M352 243 L359 246 L352 249" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M716 246 L723 246" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M723 243 L730 246 L723 249" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60" y="264" width="272" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<text x="72" y="280.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">培训内容 trainingContent</text>
+<rect x="360" y="264" width="356" height="24" rx="7" fill="#1b2335" stroke="#3a4664" stroke-width="1"/>
+<rect x="360" y="264" width="4" height="24" rx="2" fill="#58c3b4"/>
+<text x="376" y="280.5" fill="#eef2fb" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14" font-weight="700">SL-004</text>
+<text x="704" y="280.5" fill="#b9c3d8" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" text-anchor="end">非空</text>
+<rect x="730" y="264" width="250" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<rect x="730" y="264" width="3" height="24" rx="1.5" fill="#8496f5"/>
+<text x="744" y="280.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">令第3号 · 第二十二条</text>
+<circle cx="992" cy="276" r="4" fill="#ff8f86"/>
+<text x="1004" y="280.5" fill="#ff8f86" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" font-weight="700">error</text>
+<path d="M333 276 L352 276" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3"/>
+<path d="M352 273 L359 276 L352 279" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M716 276 L723 276" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M723 273 L730 276 L723 279" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60" y="294" width="272" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<text x="72" y="310.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">证书编号 certNo</text>
+<rect x="360" y="294" width="356" height="24" rx="7" fill="#1b2335" stroke="#3a4664" stroke-width="1"/>
+<rect x="360" y="294" width="4" height="24" rx="2" fill="#58c3b4"/>
+<text x="376" y="310.5" fill="#eef2fb" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14" font-weight="700">SL-006</text>
+<text x="704" y="310.5" fill="#b9c3d8" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" text-anchor="end">非空</text>
+<rect x="730" y="294" width="250" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<rect x="730" y="294" width="3" height="24" rx="1.5" fill="#b99cf0"/>
+<text x="744" y="310.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">令第60号 · 第三条</text>
+<circle cx="992" cy="306" r="4" fill="#ff8f86"/>
+<text x="1004" y="310.5" fill="#ff8f86" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" font-weight="700">error</text>
+<path d="M333 306 L352 306" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3"/>
+<path d="M352 303 L359 306 L352 309" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M716 306 L723 306" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M723 303 L730 306 L723 309" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60" y="324" width="272" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<text x="72" y="340.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">发证日期 → 有效期至</text>
+<rect x="360" y="324" width="356" height="24" rx="7" fill="#1b2335" stroke="#3a4664" stroke-width="1"/>
+<rect x="360" y="324" width="4" height="24" rx="2" fill="#e0a34a"/>
+<text x="376" y="340.5" fill="#eef2fb" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14" font-weight="700">SL-007</text>
+<text x="704" y="340.5" fill="#b9c3d8" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" text-anchor="end">间隔 ≥ 1095 天</text>
+<rect x="730" y="324" width="250" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<rect x="730" y="324" width="3" height="24" rx="1.5" fill="#b99cf0"/>
+<text x="744" y="340.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">令第60号 · 第十四条</text>
+<circle cx="992" cy="336" r="4" fill="#f0bb63"/>
+<text x="1004" y="340.5" fill="#f0bb63" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" font-weight="700">warn</text>
+<path d="M333 336 L352 336" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3"/>
+<path d="M352 333 L359 336 L352 339" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M716 336 L723 336" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M723 333 L730 336 L723 339" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60" y="354" width="272" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<text x="72" y="370.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">作业日期 / 有效期至</text>
+<rect x="360" y="354" width="356" height="24" rx="7" fill="#1b2335" stroke="#3a4664" stroke-width="1"/>
+<rect x="360" y="354" width="4" height="24" rx="2" fill="#e0a34a"/>
+<text x="376" y="370.5" fill="#eef2fb" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14" font-weight="700">SL-008</text>
+<text x="704" y="370.5" fill="#b9c3d8" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" text-anchor="end">有效期 − 作业 ≥ 1 天</text>
+<rect x="730" y="354" width="250" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<rect x="730" y="354" width="3" height="24" rx="1.5" fill="#b99cf0"/>
+<text x="744" y="370.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">令第60号 · 第十四条</text>
+<circle cx="992" cy="366" r="4" fill="#ff8f86"/>
+<text x="1004" y="370.5" fill="#ff8f86" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" font-weight="700">error</text>
+<path d="M333 366 L352 366" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3"/>
+<path d="M352 363 L359 366 L352 369" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M716 366 L723 366" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M723 363 L730 366 L723 369" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60" y="384" width="272" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<text x="72" y="400.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">发证日期 → 独立作业日期</text>
+<rect x="360" y="384" width="356" height="24" rx="7" fill="#1b2335" stroke="#3a4664" stroke-width="1"/>
+<rect x="360" y="384" width="4" height="24" rx="2" fill="#e0a34a"/>
+<text x="376" y="400.5" fill="#eef2fb" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14" font-weight="700">SL-010</text>
+<text x="704" y="400.5" fill="#b9c3d8" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" text-anchor="end">间隔 ≥ 182 天</text>
+<rect x="730" y="384" width="250" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<rect x="730" y="384" width="3" height="24" rx="1.5" fill="#b99cf0"/>
+<text x="744" y="400.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">令第60号 · 第二十二条</text>
+<circle cx="992" cy="396" r="4" fill="#ff8f86"/>
+<text x="1004" y="400.5" fill="#ff8f86" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" font-weight="700">error</text>
+<path d="M333 396 L352 396" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3"/>
+<path d="M352 393 L359 396 L352 399" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M716 396 L723 396" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M723 393 L730 396 L723 399" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="60" y="426" fill="#f0bb63" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" font-weight="700">原则推导 derived-from-principle · 上限 warn</text>
+<rect x="40" y="412" width="5" height="48" rx="2.5" fill="#f0bb63" opacity="0.85"/>
+<rect x="60" y="434" width="272" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<text x="72" y="450.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">教育级别 educationLevel</text>
+<rect x="360" y="434" width="356" height="24" rx="7" fill="#1b2335" stroke="#3a4664" stroke-width="1"/>
+<rect x="360" y="434" width="4" height="24" rx="2" fill="#58c3b4"/>
+<text x="376" y="450.5" fill="#eef2fb" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14" font-weight="700">SL-005</text>
+<text x="704" y="450.5" fill="#b9c3d8" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" text-anchor="end">非空 · 适用性存疑</text>
+<rect x="730" y="434" width="250" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<rect x="730" y="434" width="3" height="24" rx="1.5" fill="#8496f5"/>
+<text x="744" y="450.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">令第3号 · 第十二条</text>
+<circle cx="992" cy="446" r="4" fill="#f0bb63"/>
+<text x="1004" y="450.5" fill="#f0bb63" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" font-weight="700">warn</text>
+<path d="M333 446 L352 446" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3"/>
+<path d="M352 443 L359 446 L352 449" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M716 446 L723 446" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M723 443 L730 446 L723 449" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="60" y="476" fill="#8496f5" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" font-weight="700">机构配置 institutional-configuration · 上限 info</text>
+<rect x="40" y="462" width="5" height="46" rx="2.5" fill="#8496f5" opacity="0.85"/>
+<rect x="60" y="484" width="272" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<text x="72" y="500.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">姓名 personName</text>
+<rect x="360" y="484" width="356" height="24" rx="7" fill="#1b2335" stroke="#3a4664" stroke-width="1"/>
+<rect x="360" y="484" width="4" height="24" rx="2" fill="#b99cf0"/>
+<text x="376" y="500.5" fill="#eef2fb" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14" font-weight="700">SL-011</text>
+<text x="704" y="500.5" fill="#b9c3d8" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" text-anchor="end">不含模板占位符</text>
+<rect x="730" y="484" width="250" height="24" rx="7" fill="#202a3e" stroke="#2c3650" stroke-width="1"/>
+<rect x="730" y="484" width="3" height="24" rx="1.5" fill="#58c3b4"/>
+<text x="744" y="500.5" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14">本机构资料归档办法 · 非法规</text>
+<circle cx="992" cy="496" r="4" fill="#8496f5"/>
+<text x="1004" y="500.5" fill="#8496f5" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="14" font-weight="700">info</text>
+<path d="M333 496 L352 496" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="3 3"/>
+<path d="M352 493 L359 496 L352 499" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M716 496 L723 496" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M723 493 L730 496 L723 499" fill="none" stroke="#8c97ae" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="44" y="518" width="1012" height="92" rx="18" fill="#1b2335" stroke="#2c3650" stroke-width="1" filter="url(#soft)"/>
+<text x="64" y="542" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" font-weight="700">输出 · buildView() 投影</text>
+<text x="1036" y="542" fill="#5ddba0" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" font-weight="700" text-anchor="end">结论留给审核人</text>
+<path d="M64 552 L1036 552" stroke="#2c3650" stroke-width="1" stroke-linecap="round"/>
+<rect x="64" y="560" width="70" height="18" rx="9" fill="#3a2024" stroke="#6a3634" stroke-width="1"/>
+<text x="74" y="573" fill="#ff8f86" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" font-weight="700">issues[]</text>
+<text x="146" y="575" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13.5">SL-001 [第1行 · 字段 trainingHours] 16 &lt; 24</text>
+<text x="64" y="596" fill="#8c97ae" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">每条带 规则号 · 行号 · 字段 · 条款 · 建议核对</text>
+<path d="M616 560 L616 600" stroke="#2c3650" stroke-width="1" stroke-linecap="round"/>
+<rect x="632" y="560" width="82" height="18" rx="9" fill="#3a2f1c" stroke="#6b5430" stroke-width="1"/>
+<text x="642" y="573" fill="#f0bb63" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11" font-weight="700">skipped[]</text>
+<text x="726" y="575" fill="#eef2fb" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13.5">缺列 / disabledRules / onlyRules</text>
+<text x="632" y="596" fill="#8c97ae" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">逐条写明原因；空 issues ≠ 没问题</text>
+<rect x="44" y="618" width="1012" height="28" rx="14" fill="#202a3e" stroke="#8c97ae" stroke-width="1.1" stroke-dasharray="4 4" opacity="0.95"/>
+<text x="60" y="637" fill="#f0bb63" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11" font-weight="700">SL-009 未实现</text>
+<text x="147" y="637" fill="#8c97ae" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">（证书工种 = 实际工种，引擎无文本精确相等判据） · 仅覆盖 1/10 本台账 · 只读 · 无网络 · 不判合规 · 不认定责任</text>
+</svg>

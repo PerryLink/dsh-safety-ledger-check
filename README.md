@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-safety-ledger-check-flow-dark.svg">
-  <img src="docs/assets/dsh-safety-ledger-check-flow-light.svg" width="100%" alt="dsh-safety-ledger-check 数据流：file / material → safety_ledger_check → rules/safety-ledger-check.yaml（SL-001..SL-011）→ issues 与 skipped → 审核人；配置经 rulesFile、disabledRules、onlyRules、skipNotes、timeoutMs 注入">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-safety-ledger-check-hero-zh-dark.webp">
+  <img src="docs/assets/dsh-safety-ledger-check-hero-zh-light.webp" width="100%" alt="dsh-safety-ledger-check 配图：左列是插件名与两行价值句；右侧是一份安全教育与资格台账——李强、学时 16 低于下限 24、证书有效期至 2029-01-10——下方是 SL-001 差异卡：第 1 行、字段 trainingHours、依据《生产经营单位安全培训规定》第十三条，底部 issues[] 1 条、skipped[] 0 条，结论留给审核人">
 </picture>
 
 # dsh-safety-ledger-check
@@ -50,6 +50,11 @@ dsh plugin --profile <name> add dsh-safety-ledger-check
 - 首次取证人员是否满 6 个月才独立作业？
 
 **边界：** 核对的是台账，不是现场。不验证证书真伪（那要上全国工程质量安全监管信息平台），也不判断某工种是否属于特种作业范围（工种目录按 60 号令第二条另行规定）。空格报的是「台账没有记录」，不是「没有发生过」。
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-safety-ledger-check-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-safety-ledger-check-flow-v5-light.svg" width="100%" alt="dsh-safety-ledger-check 结构图：左列是台账的列，中列是 SL-001..SL-011 的判据（按数值、存在、日期差、占位符分色），右列是规则引用的条款号（引文逐字核对）；十条规则按证据等级分三带——直接依据上限 error、原则推导上限 warn、机构配置上限 info。底部 issues[] 带规则号、行号、字段与条款，skipped[] 写明缺列、停用或未选中；虚线边界列出 SL-009 未实现与十本台账只覆盖一本。结论留给审核人">
+</picture>
 
 ## 三步上手
 
@@ -309,7 +314,7 @@ node samples/quickstart/run.mjs
 | `tests/` | vitest：每条规则配套合规/违规夹具 |
 | `scripts/` | 引文、lockfile、自包含与五语 README 门禁 |
 
-README 配图由 [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) 程序化生成（Python + Pillow），可重复执行；旧的单版流程图、hero 与演示图保留在 `docs/assets/` 供外链使用，README 只引用新生成的深浅双版。
+README 配图由 [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) 程序化生成（Pillow 出 hero，手写 SVG 出结构图），可重复执行；旧的单版流程图、hero 与演示图保留在 `docs/assets/` 供外链使用，README 引用新生成的 hero 与 flow-v5 深浅双版。
 
 Topics：`deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `safety`, `ledger`, `training`, `certificate`
 

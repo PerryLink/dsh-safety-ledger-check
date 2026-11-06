@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-safety-ledger-check-flow-dark.svg">
-  <img src="docs/assets/dsh-safety-ledger-check-flow-light.svg" width="100%" alt="dsh-safety-ledger-check data flow: file / material → safety_ledger_check → rules/safety-ledger-check.yaml (SL-001..SL-011) → issues and skipped → reviewer; config flows in via rulesFile / disabledRules / onlyRules / skipNotes / timeoutMs">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-safety-ledger-check-hero-en-dark.webp">
+  <img src="docs/assets/dsh-safety-ledger-check-hero-en-light.webp" width="100%" alt="dsh-safety-ledger-check: plugin name and two value lines on the left; on the right one safety-education ledger row — Li Qiang, 16 hours against the 24-hour floor, certificate valid to 2029-01-10 — then the SL-001 finding card (row 1, field trainingHours, Order No. 3 Article 13) and the report strip: issues[] 1, skipped[] 0, the verdict stays with the reviewer">
 </picture>
 
 # dsh-safety-ledger-check
@@ -50,6 +50,11 @@ It answers these questions:
 - Did a first-time certificate holder wait out the six-month internship before working alone?
 
 **Boundary:** it checks the ledger, not the site. It does not verify that a certificate is genuine — that needs the national quality-and-safety supervision platform — and it does not decide whether a trade falls inside the special-operation catalogue, which is published separately under Order 60, Article 2. A blank cell is reported as "the ledger does not record it", never as "it did not happen".
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-safety-ledger-check-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-safety-ledger-check-flow-v5-light.svg" width="100%" alt="dsh-safety-ledger-check structure: ledger columns on the left, the criteria of SL-001..SL-011 in the middle (colour-coded by number, presence, date-gap and placeholder checks), and the article each rule cites on the right; the ten rules sit in three evidence bands whose ceilings are error, warn and info. The bottom band projects issues[] with rule, row, field and clause, and skipped[] naming missing columns, disabled or unselected rules; a dashed boundary records SL-009 as not implemented and one of ten ledgers as covered. The verdict stays with the reviewer">
+</picture>
 
 ## Three-step setup
 
@@ -326,7 +331,7 @@ Directory layout:
 | `tests/` | vitest: a compliant/violating fixture pair for every rule |
 | `scripts/` | Citation, lockfile, self-contained, and five-language README gates |
 
-The README images are generated programmatically by [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) and are safe to re-run; the older single-skin flow diagram, hero, and demo stay in `docs/assets/` for external deep links, while the READMEs reference only the new light/dark pair.
+The README images are generated programmatically by [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Pillow for the hero, hand-written SVG for the structure diagram) and are safe to re-run; the older single-skin flow diagram, hero, and demo stay in `docs/assets/` for external deep links, while the READMEs reference only the new hero and flow-v5 light/dark pairs.
 
 Topics: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `safety`, `ledger`, `training`, `certificate`
 

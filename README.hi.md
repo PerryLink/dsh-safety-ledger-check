@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-safety-ledger-check-flow-dark.svg">
-  <img src="docs/assets/dsh-safety-ledger-check-flow-light.svg" width="100%" alt="dsh-safety-ledger-check डेटा प्रवाह: file / material → safety_ledger_check → rules/safety-ledger-check.yaml (SL-001..SL-011) → issues और skipped → समीक्षक; कॉन्फ़िगरेशन rulesFile / disabledRules / onlyRules / skipNotes / timeoutMs से आता है">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-safety-ledger-check-hero-en-dark.webp">
+  <img src="docs/assets/dsh-safety-ledger-check-hero-en-light.webp" width="100%" alt="dsh-safety-ledger-check: बाईं ओर नाम और दो मूल्य-पंक्तियाँ; दाईं ओर सुरक्षा-योग्यता रजिस्टर की एक पंक्ति (Li Qiang, 24 की न्यूनतम सीमा के मुकाबले 16 घंटे) जिसका सेल चिह्नित है, SL-001 अंतर-कार्ड — पंक्ति 1, फ़ील्ड trainingHours, आदेश सं. 3 अनुच्छेद 13 — और रिपोर्ट पट्टी: issues[] 1, skipped[] 0, निर्णय समीक्षक के पास">
 </picture>
 
 # dsh-safety-ledger-check
@@ -50,6 +50,11 @@ dsh plugin --profile <name> add dsh-safety-ledger-check
 - पहली बार प्रमाणपत्र लेने वाले ने अकेले काम करने से पहले छह माह का इंटर्नशिप पूरा किया?
 
 **सीमा:** यह रजिस्टर जाँचता है, साइट नहीं। प्रमाणपत्र की प्रामाणिकता नहीं जाँचता — उसके लिए राष्ट्रीय गुणवत्ता-सुरक्षा पर्यवेक्षण मंच चाहिए — और यह भी तय नहीं करता कि कोई व्यवसाय विशेष-संचालन सूची में है या नहीं, जो आदेश 60 के अनुच्छेद 2 में अलग प्रकाशित है। खाली सेल «रजिस्टर में दर्ज नहीं» बताता है, «हुआ ही नहीं» नहीं।
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-safety-ledger-check-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-safety-ledger-check-flow-v5-light.svg" width="100%" alt="dsh-safety-ledger-check, संरचना: बाईं ओर रजिस्टर के कॉलम, बीच में SL-001..SL-011 के मानदंड (संख्या, उपस्थिति, तिथि-अंतर और प्लेसहोल्डर के अनुसार रंग) और दाईं ओर वह धारा जिसे हर नियम उद्धृत करता है; दस नियम तीन साक्ष्य-पट्टियों में हैं जिनकी सीमाएँ error, warn और info हैं। नीचे issues[] में नियम, पंक्ति, फ़ील्ड और धारा, तथा skipped[] में अनुपस्थित कॉलम, बंद या अचयनित नियम; एक बिंदुयुक्त पट्टी SL-009 को अप्रयुक्त और दस में से एक रजिस्टर को कवर बताती है। निर्णय समीक्षक के पास रहता है">
+</picture>
 
 ## तीन चरणों में शुरुआत
 
@@ -300,7 +305,7 @@ node samples/quickstart/run.mjs
 | `tests/` | vitest: हर नियम के लिए अनुरूप/उल्लंघन fixture जोड़ी |
 | `scripts/` | उद्धरण, lockfile, स्व-निहित और पाँच-भाषा README गेट |
 
-README की छवियाँ [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) से प्रोग्रामेटिक रूप से बनती हैं (Python + Pillow) और दोबारा चलाई जा सकती हैं; पुराना एकल-संस्करण फ़्लो डायग्राम, hero और डेमो बाहरी लिंक के लिए `docs/assets/` में रखे गए हैं, जबकि README केवल नए light/dark जोड़े को संदर्भित करते हैं।
+README की छवियाँ [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) से प्रोग्रामेटिक रूप से बनती हैं (hero के लिए Pillow, संरचना-चित्र के लिए हाथ से लिखा SVG) और दोबारा चलाई जा सकती हैं; पुराना एकल-संस्करण फ़्लो डायग्राम, hero और डेमो बाहरी लिंक के लिए `docs/assets/` में रखे गए हैं, जबकि README केवल नए hero और flow-v5 light/dark जोड़ों को संदर्भित करते हैं।
 
 Topics: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `safety`, `ledger`, `training`, `certificate`
 

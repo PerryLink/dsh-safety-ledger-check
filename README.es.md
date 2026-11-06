@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-safety-ledger-check-flow-dark.svg">
-  <img src="docs/assets/dsh-safety-ledger-check-flow-light.svg" width="100%" alt="Flujo de datos de dsh-safety-ledger-check: file / material → safety_ledger_check → rules/safety-ledger-check.yaml (SL-001..SL-011) → issues y skipped → revisor; la configuración entra por rulesFile / disabledRules / onlyRules / skipNotes / timeoutMs">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-safety-ledger-check-hero-en-dark.webp">
+  <img src="docs/assets/dsh-safety-ledger-check-hero-en-light.webp" width="100%" alt="dsh-safety-ledger-check: a la izquierda el nombre y dos frases de valor; a la derecha una fila del registro de seguridad y cualificación (Li Qiang, 16 horas frente al mínimo de 24) con la celda marcada, la tarjeta de diferencia SL-001 — fila 1, campo trainingHours, Orden n.º 3 artículo 13 — y la franja del informe: issues[] 1, skipped[] 0, el dictamen queda en manos del revisor">
 </picture>
 
 # dsh-safety-ledger-check
@@ -50,6 +50,11 @@ Responde a estas preguntas:
 - ¿Esperó seis meses quien obtuvo el certificado por primera vez antes de trabajar solo?
 
 **Límite:** verifica el registro, no la obra. No comprueba la autenticidad de un certificado —eso exige la plataforma nacional de supervisión de calidad y seguridad— ni decide si un oficio pertenece al catálogo de operaciones especiales, que se publica aparte en el artículo 2 de la Orden 60. Una celda vacía se informa como «el registro no lo recoge», nunca como «no ocurrió».
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-safety-ledger-check-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-safety-ledger-check-flow-v5-light.svg" width="100%" alt="dsh-safety-ledger-check, estructura: a la izquierda las columnas del registro, en el centro los criterios de SL-001..SL-011 (codificados por color según número, presencia, intervalo de fechas y marcador) y a la derecha el artículo que cada regla cita; las diez reglas se agrupan en tres bandas de evidencia con techos error, warn e info. Abajo, issues[] con regla, fila, campo y cláusula, y skipped[] con columnas ausentes, reglas desactivadas o no seleccionadas; una franja discontinua registra SL-009 sin implementar y uno de diez libros cubierto. El dictamen queda en manos del revisor">
+</picture>
 
 ## Instalación en tres pasos
 
@@ -300,7 +305,7 @@ Estructura del directorio:
 | `tests/` | vitest: un par de fixtures conforme/infractor por regla |
 | `scripts/` | Puertas de citas, lockfile, autocontención y README en cinco idiomas |
 
-Las imágenes del README se generan programáticamente con [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) y se pueden reejecutar; el diagrama de flujo, el hero y la demo de una sola piel anteriores se conservan en `docs/assets/` para enlaces externos, mientras que los README solo referencian el nuevo par claro/oscuro.
+Las imágenes del README se generan programáticamente con [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Pillow para el hero, SVG escrito a mano para el diagrama) y se pueden reejecutar; el diagrama de flujo, el hero y la demo de una sola piel anteriores se conservan en `docs/assets/` para enlaces externos, mientras que los README solo referencian los nuevos pares claro/oscuro del hero y de flow-v5.
 
 Topics: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `safety`, `ledger`, `training`, `certificate`
 
