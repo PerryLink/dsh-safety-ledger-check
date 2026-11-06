@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-label="dsh-safety-ledger-check data flow">
+<title>dsh-safety-ledger-check data flow</title>
+<rect width="1200" height="400" rx="18" fill="#0d1117"/>
+<text x="60" y="62" fill="#f0f6fc" font-family="ui-sans-serif,system-ui,sans-serif" font-size="30" font-weight="700">dsh-safety-ledger-check</text>
+<text x="60" y="94" fill="#8b949e" font-family="ui-monospace,monospace" font-size="16">safety-qualification ledger · hours · records · certificates</text>
+<line x1="60" y1="116" x2="1140" y2="116" stroke="#30363d"/>
+<rect x="60" y="150" width="190" height="96" rx="14" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+<text x="155" y="190" fill="#f0f6fc" text-anchor="middle" font-family="ui-monospace,monospace" font-size="15" font-weight="700">file / material</text>
+<text x="155" y="218" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12">JSON or YAML</text>
+<path d="M256 198h23" stroke="#8b949e" stroke-width="3"/>
+<path d="M277 191l10 7-10 7" fill="none" stroke="#8b949e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="285" y="150" width="190" height="96" rx="14" fill="#161b22" stroke="#4B67B4" stroke-width="2"/>
+<text x="380" y="190" fill="#f0f6fc" text-anchor="middle" font-family="ui-monospace,monospace" font-size="15" font-weight="700">safety_ledger_check</text>
+<text x="380" y="218" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12">one flat ledger</text>
+<path d="M481 198h23" stroke="#8b949e" stroke-width="3"/>
+<path d="M502 191l10 7-10 7" fill="none" stroke="#8b949e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="510" y="150" width="190" height="96" rx="14" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+<text x="605" y="190" fill="#f0f6fc" text-anchor="middle" font-family="ui-monospace,monospace" font-size="15" font-weight="700">rules/*.yaml</text>
+<text x="605" y="218" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12">SL-001 .. SL-011</text>
+<path d="M706 198h23" stroke="#8b949e" stroke-width="3"/>
+<path d="M727 191l10 7-10 7" fill="none" stroke="#8b949e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="735" y="150" width="190" height="96" rx="14" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+<text x="830" y="190" fill="#f0f6fc" text-anchor="middle" font-family="ui-monospace,monospace" font-size="15" font-weight="700">report</text>
+<text x="830" y="218" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12">issues + skipped</text>
+<path d="M931 198h23" stroke="#8b949e" stroke-width="3"/>
+<path d="M952 191l10 7-10 7" fill="none" stroke="#8b949e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="960" y="150" width="190" height="96" rx="14" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+<text x="1055" y="190" fill="#f0f6fc" text-anchor="middle" font-family="ui-monospace,monospace" font-size="15" font-weight="700">reviewer</text>
+<text x="1055" y="218" fill="#8b949e" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12">verdict stays human</text>
+<path d="M380 246v39" stroke="#4B67B4" stroke-width="2" stroke-dasharray="5 5"/>
+<path d="M605 246v39" stroke="#4B67B4" stroke-width="2" stroke-dasharray="5 5"/>
+<rect x="285" y="285" width="490" height="52" rx="12" fill="#161b22" stroke="#4B67B4" stroke-width="2"/>
+<text x="530" y="318" fill="#f0f6fc" text-anchor="middle" font-family="ui-monospace,monospace" font-size="13">rulesFile · disabledRules · onlyRules · skipNotes · timeoutMs</text>
+<text x="60" y="378" fill="#8b949e" font-family="ui-monospace,monospace" font-size="13">ledger.notCovered = 9 · severity caps: derived-from-principle &lt;= warn · institutional-configuration &lt;= info · read-only · no network</text>
+</svg>
