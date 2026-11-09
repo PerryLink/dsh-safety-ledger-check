@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "tier": "L1+ingest",
+  "input_formats": [
+    "json",
+    "yaml",
+    "csv",
+    "xlsx",
+    "xlsm",
+    "docx"
+  ],
+  "outputs": [
+    "markdown",
+    "json"
+  ],
+  "rules": {
+    "total": 10,
+    "executed": 10,
+    "skipped": 0,
+    "manual": 0,
+    "unsupported": 0
+  },
+  "benchmark": {
+    "kind": "quickstart-sample",
+    "corpus_size": 1,
+    "note": "安全资格台账的 quickstart 样例经 CSV 抽取；无真实台账语料",
+    "measured_at": "2026-11-09"
+  },
+  "limits": [
+    "证书真伪、培训内容是否对应工种不判",
+    "不做合规/定性判定；未执行规则会列在 skipped"
+  ]
+}
