@@ -56,6 +56,11 @@ Ela responde a estas perguntas:
   <img src="docs/assets/dsh-safety-ledger-check-flow-v5-light.svg" width="100%" alt="dsh-safety-ledger-check, estrutura: à esquerda as colunas do registro, ao centro os critérios de SL-001..SL-011 (codificados por cor conforme número, presença, intervalo de datas e marcador) e à direita o artigo que cada regra cita; as dez regras ficam em três faixas de evidência com tetos error, warn e info. Embaixo, issues[] com regra, linha, campo e cláusula, e skipped[] com colunas ausentes, regras desativadas ou não selecionadas; uma faixa tracejada regista SL-009 não implementado e um de dez livros coberto. A conclusão fica com o revisor">
 </picture>
 
+![dsh-safety-ledger-check: execução real de terminal](docs/assets/dsh-safety-ledger-check-demo.gif)
+
+*Repetição animada de uma execução real registrada neste repositório.*
+
+
 ## Instalação em três passos
 
 1. **Instale** (escolha um canal):

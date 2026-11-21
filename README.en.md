@@ -56,6 +56,11 @@ It answers these questions:
   <img src="docs/assets/dsh-safety-ledger-check-flow-v5-light.svg" width="100%" alt="dsh-safety-ledger-check structure: ledger columns on the left, the criteria of SL-001..SL-011 in the middle (colour-coded by number, presence, date-gap and placeholder checks), and the article each rule cites on the right; the ten rules sit in three evidence bands whose ceilings are error, warn and info. The bottom band projects issues[] with rule, row, field and clause, and skipped[] naming missing columns, disabled or unselected rules; a dashed boundary records SL-009 as not implemented and one of ten ledgers as covered. The verdict stays with the reviewer">
 </picture>
 
+![dsh-safety-ledger-check: real terminal run](docs/assets/dsh-safety-ledger-check-demo.gif)
+
+*Animated replay of a real run recorded in this repository.*
+
+
 ## Three-step setup
 
 1. **Install** (pick one channel):

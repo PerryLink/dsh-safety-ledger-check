@@ -34,6 +34,10 @@ dsh plugin --profile <name> add dsh-safety-ledger-check
 
 ## 它是什么
 
+![dsh-safety-ledger-check 真实终端运行](docs/assets/dsh-safety-ledger-check-demo.gif)
+
+*本仓库一次真实运行的动图回放。*
+
 `dsh-safety-ledger-check` 注册 `safety_ledger_check` 工具：把台账（JSON 或 YAML）交给它，它按随包的规则库逐条核对，返回 Markdown 差异清单与结构化结果。每条发现都带规则号、行号、字段、依据条款与「建议核对」动作；没能执行的检查单列在 `skipped` 里，并写明原因。
 
 它核对的是**台账**，不是现场：只回答材料内部能逐字指认的差异，不判断台账之外是否真的做过培训，也不认定责任。
