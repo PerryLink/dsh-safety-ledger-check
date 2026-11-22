@@ -11,6 +11,8 @@
 
 面向 DeepSeek Harness 的台账核对插件：一份扁平台账（一人一事件一行）套一份版本化规则库，核对岗前学时、培训档案四要素、特种作业证书与有效期、六个月实习期；只列材料内部能逐条指认的差异，不判合规、不认定责任。
 
+最近一次核验：DeepSeek Harness `dsh-v0.2.3-alpha.1`（2026-11-22）。
+
 [安装](#三步上手) · [配置](#配置) · [FAQ](#faq) · [简体中文](README.md) · [English](README.en.md) · [Español](README.es.md) · [Português](README.pt.md) · [हिन्दी](README.hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-3366CC?style=flat-square&labelColor=2B3245)](LICENSE)
@@ -269,7 +271,7 @@ profile patch 覆盖示例：
 
 | 项目 | 状态 |
 |---|---|
-| Harness | `engines.dsh`：`>=0.2.1-0 <0.3.0`；peer `@deepseek-ai/dsh-tools`：`>=0.1.2-rc.1 <0.2.0 \|\| >=0.2.0-0 <0.3.0` |
+| Harness | `engines.dsh`：`>=0.2.1-0 <0.3.0`；peer `@deepseek-ai/dsh-tools`：`>=0.1.4-rc.1 <0.2.0 \|\| >=0.2.0-0 <0.3.0` |
 | Node | `^22.19.0 \|\| >=24.0.0` |
 | 平台 | 全平台（纯 ESM；无原生代码、无联网、不调用模型） |
 | 材料 | JSON 或 YAML，UTF-8；一人一条培训记录或证书一行 |

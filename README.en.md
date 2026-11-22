@@ -11,6 +11,8 @@
 
 A ledger checker plugin for DeepSeek Harness: one flat ledger (one row per person per event) runs against a versioned rule pack that checks pre-job training hours, the four elements of a training record, special-operation certificates and their validity, and the six-month internship — listing only differences it can point to inside the material, with no compliance verdict and no liability finding.
 
+Last verified on DeepSeek Harness `dsh-v0.2.3-alpha.1` (2026-11-22).
+
 [Install](#three-step-setup) · [Configuration](#configuration) · [FAQ](#faq) · [简体中文](README.md) · [English](README.en.md) · [Español](README.es.md) · [Português](README.pt.md) · [हिन्दी](README.hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-3366CC?style=flat-square&labelColor=2B3245)](LICENSE)
@@ -59,7 +61,6 @@ It answers these questions:
 ![dsh-safety-ledger-check: real terminal run](docs/assets/dsh-safety-ledger-check-demo.gif)
 
 *Animated replay of a real run recorded in this repository.*
-
 
 ## Three-step setup
 
@@ -287,7 +288,7 @@ This plugin does one thing and occupies no shared resource:
 
 | Surface | Status |
 |---|---|
-| Harness | `engines.dsh`: `>=0.2.1-0 <0.3.0`; peer `@deepseek-ai/dsh-tools`: `>=0.1.2-rc.1 <0.2.0 \|\| >=0.2.0-0 <0.3.0` |
+| Harness | `engines.dsh`: `>=0.2.1-0 <0.3.0`; peer `@deepseek-ai/dsh-tools`: `>=0.1.4-rc.1 <0.2.0 \|\| >=0.2.0-0 <0.3.0` |
 | Node | `^22.19.0 \|\| >=24.0.0` |
 | Platforms | All platforms (pure ESM; no native code, no network, no model call) |
 | Material | JSON or YAML, UTF-8; one row per training record or certificate per person |

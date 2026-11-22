@@ -11,6 +11,8 @@
 
 Un plugin de verificación de registros para DeepSeek Harness: un registro plano (una fila por persona y evento) se contrasta con un paquete de reglas versionado que revisa horas de formación previa, los cuatro elementos del registro de formación, certificados de operación especial y su vigencia, y los seis meses de prácticas; solo enumera diferencias señalables dentro del material, sin dictamen de cumplimiento ni atribución de responsabilidad.
 
+Última verificación: DeepSeek Harness `dsh-v0.2.3-alpha.1` (2026-11-22).
+
 [Instalar](#instalación-en-tres-pasos) · [Configuración](#configuración) · [FAQ](#faq) · [简体中文](README.md) · [English](README.en.md) · [Español](README.es.md) · [Português](README.pt.md) · [हिन्दी](README.hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-3366CC?style=flat-square&labelColor=2B3245)](LICENSE)
@@ -59,7 +61,6 @@ Responde a estas preguntas:
 ![dsh-safety-ledger-check: ejecución real de terminal](docs/assets/dsh-safety-ledger-check-demo.gif)
 
 *Repetición animada de una ejecución real registrada en este repositorio.*
-
 
 ## Instalación en tres pasos
 
@@ -261,7 +262,7 @@ Este plugin hace una sola cosa y no ocupa recursos compartidos:
 
 | Superficie | Estado |
 |---|---|
-| Harness | `engines.dsh`: `>=0.2.1-0 <0.3.0`; peer `@deepseek-ai/dsh-tools`: `>=0.1.2-rc.1 <0.2.0 \|\| >=0.2.0-0 <0.3.0` |
+| Harness | `engines.dsh`: `>=0.2.1-0 <0.3.0`; peer `@deepseek-ai/dsh-tools`: `>=0.1.4-rc.1 <0.2.0 \|\| >=0.2.0-0 <0.3.0` |
 | Node | `^22.19.0 \|\| >=24.0.0` |
 | Plataformas | Todas (ESM puro; sin código nativo, sin red, sin llamadas al modelo) |
 | Material | JSON o YAML, UTF-8; una fila por registro de formación o certificado y persona |

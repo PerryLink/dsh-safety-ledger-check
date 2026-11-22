@@ -11,6 +11,8 @@
 
 DeepSeek Harness के लिए रजिस्टर-जाँच प्लगइन: एक सपाट रजिस्टर (प्रति व्यक्ति प्रति घटना एक पंक्ति) एक संस्करणबद्ध नियम-पैक से मिलाया जाता है, जो पूर्व-नियुक्ति प्रशिक्षण घंटे, प्रशिक्षण रिकॉर्ड के चार तत्व, विशेष-संचालन प्रमाणपत्र व उनकी वैधता और छह माह का इंटर्नशिप जाँचता है; केवल सामग्री में इंगित की जा सकने वाली भिन्नताएँ सूचीबद्ध करता है, कोई अनुपालन निर्णय या दायित्व-निर्धारण नहीं।
 
+अंतिम सत्यापन: DeepSeek Harness `dsh-v0.2.3-alpha.1` (2026-11-22).
+
 [इंस्टॉल](#तीन-चरणों-में-शुरुआत) · [कॉन्फ़िगरेशन](#कॉन्फ़िगरेशन) · [FAQ](#faq) · [简体中文](README.md) · [English](README.en.md) · [Español](README.es.md) · [Português](README.pt.md) · [हिन्दी](README.hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-3366CC?style=flat-square&labelColor=2B3245)](LICENSE)
@@ -59,7 +61,6 @@ dsh plugin --profile <name> add dsh-safety-ledger-check
 ![dsh-safety-ledger-check का असली टर्मिनल रन](docs/assets/dsh-safety-ledger-check-demo.gif)
 
 *इस रिपॉज़िटरी में दर्ज असली रन का एनिमेटेड रीप्ले।*
-
 
 ## तीन चरणों में शुरुआत
 
@@ -261,7 +262,7 @@ dsh plugin --profile <name> add dsh-safety-ledger-check
 
 | सतह | स्थिति |
 |---|---|
-| Harness | `engines.dsh`: `>=0.2.1-0 <0.3.0`; peer `@deepseek-ai/dsh-tools`: `>=0.1.2-rc.1 <0.2.0 \|\| >=0.2.0-0 <0.3.0` |
+| Harness | `engines.dsh`: `>=0.2.1-0 <0.3.0`; peer `@deepseek-ai/dsh-tools`: `>=0.1.4-rc.1 <0.2.0 \|\| >=0.2.0-0 <0.3.0` |
 | Node | `^22.19.0 \|\| >=24.0.0` |
 | प्लेटफ़ॉर्म | सभी (शुद्ध ESM; कोई नेटिव कोड नहीं, कोई नेटवर्क नहीं, कोई मॉडल कॉल नहीं) |
 | सामग्री | JSON या YAML, UTF-8; प्रति व्यक्ति प्रति प्रशिक्षण रिकॉर्ड या प्रमाणपत्र एक पंक्ति |
