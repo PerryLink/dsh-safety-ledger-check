@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "Safety ledger check",
-    "description": "核对施工安全资格台账：三级教育与学时、培训档案四要素、特种作业证书、有效期、工种匹配、六个月实习期。"
+    "description": "Check a construction safety-qualification ledger line by line against the clauses and get the list of which row, what is missing, and which clause requires it — the verdict stays with the reviewer."
   }
 }

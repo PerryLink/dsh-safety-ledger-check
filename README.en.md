@@ -7,6 +7,8 @@
 
 # dsh-safety-ledger-check
 
+Current version `0.1.5`.
+
 **Check a construction safety-qualification ledger line by line against the clauses and get the list of which row, what is missing, and which clause requires it — the verdict stays with the reviewer.**
 
 A ledger checker plugin for DeepSeek Harness: one flat ledger (one row per person per event) runs against a versioned rule pack that checks pre-job training hours, the four elements of a training record, special-operation certificates and their validity, and the six-month internship — listing only differences it can point to inside the material, with no compliance verdict and no liability finding.
